@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Owais Electrician</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    
+}
+    header img {
+      width: 100px;
+      height: auto;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin: 20px 0;
+      font-size: 20px;
+    }
+
+    .service-link {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .service-link:hover {
+      color: #007BFF;
+    }
+
+    .service-detail {
+      display: none;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .popup-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .review-section {
+      margin-top: 50px;
+    }
+
+    .review-item {
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="download (3).jpeg" class="img-fluid" width="100%" alt="Electrician">
+    <h1>Owais Electrician</h1>
+    <p>Empowering Connections, Lighting Futures</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Welcome to Owais Electrician</h2>
+    <p>We offer professional and reliable electrical services for your home and office.</p>
+    <a href="#services" class="btn">Explore Our Services</a>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a trusted name in electrical services, providing expert solutions with a focus on safety, efficiency, and customer satisfaction.</p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Our Services</h2><p><em>(Click here)</em></p>
+    <ul>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('ceiling-fan-detail')">Ceiling Fan Installation</a>
+        <div id="ceiling-fan-detail" class="service-detail"><p><em>install ceiling fans of all types and sizes for your comfort.</em></p><img src="download.png" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('house-wiring-detail')">Complete House Wiring</a>
+        <div id="house-wiring-detail" class="service-detail"><p><em>Complete and safe wiring solutions for your home or office.</em></p><img src="download (1).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('switchboard-repair-detail')">Switchboard Repair</a>
+        <div id="switchboard-repair-detail" class="service-detail"><p><em>and upgrade your electrical switchboards for enhanced safety.</em></p> <img src="download (2).jpeg" class="img-fluid" alt="Electrician"></div>                   
+
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('light-fitting-detail')">Light Fitting</a>
+        <div id="light-fitting-detail" class="service-detail"><p><em>light fitting for all types of lighting systems.</em></p><img src="download (3).jpeg" class="img-fluid" alt="Electrician"> </div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('ups-installation-detail')">UPS Installation</a>
+        <div id="ups-installation-detail" class="service-detail"><p><em>We install UPS systems for uninterrupted power supply.</em></p><img src="download (4).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('solar-panel-detail')">Solar Panel Wiring</a>
+        <div id="solar-panel-detail" class="service-detail"><p><em>solar panels Installation and their wiring for energy savings.</em></p><img src="download (1).png" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('outdoor-lighting-detail')">Outdoor Lighting</a>
+        <div id="outdoor-lighting-detail" class="service-detail"><p><em>Install outdoor lighting for safety, security, and aesthetics.</em></p><img src="download (5).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('electric-heater-installation-detail')">Electric Heater Installation</a>
+        <div id="electric-heater-installation-detail" class="service-detail"><p><em>We install electric heaters for efficient winter heating solutions.</em></p><img src="download (6).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('circuit-breaker-replacement-detail')">Circuit Breaker Replacement</a>
+        <div id="circuit-breaker-replacement-detail" class="service-detail">Replace faulty circuit breakers to ensure safety and reliability.<img src="download (7).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('emergency-electrician-detail')">Emergency Electrician Services</a>
+        <div id="emergency-electrician-detail" class="service-detail">24/7 emergency services for electrical problems.<img src="download (8).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('appliance-installation-detail')">Appliance Installation</a>
+        <div id="appliance-installation-detail" class="service-detail">We install home appliances like refrigerators, ovens, and more.<img src="download.jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('energy-audit-detail')">Energy Audit</a>
+        <div id="energy-audit-detail" class="service-detail">We provide energy audit services to optimize energy usage and reduce bills.<img src="download.png" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('generator-installation-detail')">Generator Installation</a>
+        <div id="generator-installation-detail" class="service-detail">Install generators for backup power during outages.<img src="images (1).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('security-lighting-installation-detail')">Security Lighting Installation</a>
+        <div id="security-lighting-installation-detail" class="service-detail">Install security lights for added protection around your property.<img src="images (2).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('dimmer-switch-installation-detail')">Dimmer Switch Installation</a>
+        <div id="dimmer-switch-installation-detail" class="service-detail">Install dimmer switches for adjustable lighting in any room.<img src="images (3).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('panel-upgrade-detail')">Panel Upgrade</a>
+        <div id="panel-upgrade-detail" class="service-detail">Upgrade electrical panels to accommodate additional power needs.<img src="images (4).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('electric-fence-installation-detail')">Electric Fence Installation</a>
+        <div id="electric-fence-installation-detail" class="service-detail">Install electric fences for enhanced security on your property.<img src="images (5).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('home-automation-detail')">Home Automation</a>
+        <div id="home-automation-detail" class="service-detail">Smart home solutions for controlling lights, fans, and other appliances.<img src="images (6).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('surge-protection-detail')">Surge Protection</a>
+        <div id="surge-protection-detail" class="service-detail">Install surge protectors to safeguard your electrical appliances.<img src="images (7).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('landscape-lighting-detail')">Landscape Lighting</a>
+        <div id="landscape-lighting-detail" class="service-detail">Install lighting to enhance your garden and outdoor spaces.<img src="images (8).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('recessed-lighting-detail')">Recessed Lighting</a>
+        <div id="recessed-lighting-detail" class="service-detail">Install recessed lighting for a sleek, modern look in any room.<img src="images (9).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('electric-vehicle-charging-station-detail')">Electric Vehicle Charging Station</a>
+        <div id="electric-vehicle-charging-station-detail" class="service-detail">We install EV charging stations at your home or office.<img src="" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('pool-lighting-detail')">Pool Lighting</a>
+        <div id="pool-lighting-detail" class="service-detail">Install safe and aesthetic pool lighting for nighttime swimming.<img src="images.jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('under-cabinet-lighting-detail')">Under Cabinet Lighting</a>
+        <div id="under-cabinet-lighting-detail" class="service-detail">Install under-cabinet lighting to brighten your kitchen or workspace.<img src="download (9).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('office-wiring-detail')">Office Wiring</a>
+        <div id="office-wiring-detail" class="service-detail">Efficient wiring solutions for office spaces, ensuring productivity and safety.<img src="images (10).jpeg" class="img-fluid" alt="Electrician"></div>    
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('commercial-lighting-detail')">Commercial Lighting</a>
+        <div id="commercial-lighting-detail" class="service-detail">Provide lighting solutions for commercial properties such as offices, stores, etc.<img src="images (10).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+      <li><a href="javascript:void(0);" class="service-link" onclick="toggleDetail('smart-thermostat-installation-detail')">Smart Thermostat Installation</a>
+        <div id="smart-thermostat-installation-detail" class="service-detail">Install smart thermostats for more energy-efficient climate control.<img src="download (10).jpeg" class="img-fluid" alt="Electrician"></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Review Section -->
+  <section class="review-section" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div id="review-list">
+      <!-- Pre-filled Reviews -->
+      <div class="review-item">
+        <strong>Salman</strong>
+        <p>Excellent service, my ceiling fan was installed quickly and efficiently. Highly recommend Owais Electrician!</p>
+      </div>
+      <div class="review-item">
+        <strong>Ahmed Ali</strong>
+        <p>Fantastic job on the house wiring! Professional and timely work. Very satisfied.</p>
+      </div>
+      <div class="review-item">
+        <strong>Sara Khan</strong>
+        <p>Great job! They installed the UPS and made sure everything was working perfectly before leaving. Will call again for future needs.</p>
+      </div>
+      <div class="review-item">
+        <strong>Usman Ali</strong>
+        <p>The light fitting was done perfectly. Very pleased with the quality of service. Highly recommended!</p>
+      </div>
+      <div class="review-item">
+        <strong>Fatima Noor</strong>
+        <p>Really good experience. Their team did the switchboard repair at my home and explained everything clearly. Great work!</p>
+      </div>
+    </div>
+    <button class="popup-btn" onclick="openReviewPopup()">Add Your Review</button>
+  </section>
+     <!-- Leave Review Popup -->
+  <div class="popup-container" id="review-popup">
+    <div class="popup-content">
+      <h3>Leave Your Review</h3>
+      <input type="text" id="review-name" placeholder="Your Name" required>
+      <textarea id="review-text" placeholder="Your Review" required></textarea>
+      <button onclick="submitReview()">Submit Review</button>
+      <button onclick="closeReviewPopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- FAQs Section -->
+  <section id="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li class="faq-item"><strong>What services do you offer?</strong><br>We offer ceiling fan installation, house wiring, switchboard repair, and more.</li>
+      <li class="faq-item"><strong>How can I contact you?</strong><br>You can reach us through the contact form below or call us at our phone number.</li>
+      <!-- Add more FAQs as needed -->
+    </ul>
+  </section>
+  <!-- Contact Us -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: <strong>03112974518</strong></p>
+    <p>Email: <strong>owais.jewani@gmail.com</strong></p>
+    <p>Location:  pib colony,Karachi, Pakistan</p>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/03112974518" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>chat on whatsapp
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Owais Electrician. All rights reserved.</p>
+  </footer>
+
+  <!-- Review Popup -->
+  <div class="popup-container" id="review-popup">
+    <div class="popup-content">
+      <h2>Add Your Review</h2>
+      <textarea id="review-text" rows="4" placeholder="Write your review..."></textarea><br><br>
+      <button onclick="submitReview()">Submit</button>
+      <button onclick="closeReviewPopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetail(serviceId) {
+      var detail = document.getElementById(serviceId);
+      detail.style.display = detail.style.display === 'none' || detail.style.display === '' ? 'block' : 'none';
+    }
+
+    function openReviewPopup() {
+      document.getElementById('review-popup').style.display = 'flex';
+    }
+
+    function closeReviewPopup() {
+      document.getElementById('review-popup').style.display = 'none';
+    }
+    // Submit Review
+    function submitReview() {
+      const name = document.getElementById('review-name').value;
+      const reviewText = document.getElementById('review-text').value;
+    }
+    function submitReview() {
+      var reviewText = document.getElementById('review-text').value;
+      if (reviewText) {
+        var reviewList = document.getElementById('review-list');
+        var newReview = document.createElement('div');
+        newReview.classList.add('review-item');
+        newReview.innerHTML = `<strong>Anonymous</strong><p>${reviewText}</p>`;
+        reviewList.appendChild(newReview);
+        document.getElementById('review-text').value = '';
+        closeReviewPopup();
+      }
+    }
+  </script>
+</body>
+</html>
